@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Tài Xĩu</title>
+  <link rel="icon" href="image/icon.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="nav">
+    <div class="col-30">
+      <p id="user-name">Nobita</p>
+      <img id="user-icon" src="image/nav/user-icon.png" alt="user icon">
+    </div>
+    <div class="col-30">
+      <p id="money">100.000</p>
+      <img id="money-icon" src="image/nav/money-icon.png" alt="money-icon">
+      <button id="charge-button" type="button">+</button>
+    </div>
+    <div class="col-30">
+      <div id="draw-button">Withdraw</div>
+    </div>
+  </nav>
+  <button id="play-button" style="margin-top: 100px;">Play Game</button>
+  <section id="modal">
+    <header>
+      <h1>Game Play</h1>
+    </header>
+    <span id="close">&times;</span>
+    <div id="background-play">
+      <div class="col-30">
+        <h1>Tài</h1>
+        <div id="player1-round" class="round">0</div>
+        <div id="bet1" class="bet">BET</div>
+      </div>
+      <div class="col-30">
+        <span id="lid"></span>
+        <img id="bowl" src="image/bowl.png" alt="Bowl">
+        <div class="xuc-sac">
+          <img src="image/xuc_sac/xs1.png" alt="1">
+          <img src="image/xuc_sac/xs2.png" alt="2">
+          <img src="image/xuc_sac/xs3.png" alt="3">
+        </div>
+      </div>
+      <div class="col-30">
+        <h1>Xỉu</h1>
+        <div id="player2-round" class="round">0</div>
+        <div id="bet1" class="bet">100.000</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

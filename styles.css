@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: fixed;
+}
+
+body {
+  background: url(image/background.png);
+  background-size: cover;
+}
+
+#nav {
+  width: 100vw;
+  height: 130px;
+  background-image: linear-gradient(135deg, yellow, rgb(220, 66, 158, .9), orange);
+}
+
+#nav::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.col-30 {
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin-left: calc(10% / 4);
+  position: relative;
+}
+
+.col-30:not(.col-30:last-child) {
+  z-index: 1;
+}
+
+#user-name, #money, #draw-button, #play-button {
+  background-color:  tomato;
+  position: absolute;
+  font-size: 2em;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 1px 4px 5px black;
+  animation: color-flow 3s linear 0s infinite alternate;
+  width: 40%;
+  top: 31%;
+  left: 30%;
+}
+
+#play-button {
+  transition: transform 1s, box-shadow 1s;
+  top: 190%;
+}
+
+#play-button:hover {
+  transform: scale(0.95);
+  box-shadow: 10px 15px 30px black;
+}
+
+@keyframes color-flow {
+  50% {
+    background-color: orange;
+  }
+}
+
+#user-icon {
+  position: absolute;
+  height: 127%;
+  width: auto;
+  object-fit: cover;
+  top: 1px;
+  left: -6%;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+
+#money-icon {
+  position: absolute;
+  width: 15%;
+  object-fit: contain;
+  top: 27.5%;
+  left: 14%;
+}
+
+#charge-button {
+  position: absolute;
+  top: calc(31% + 2px);
+  left: calc(70% + 12px);
+  border: none;
+  background-color: transparent;
+  font-size: 3em;
+  text-align: center;
+  width: 40px;
+  background-image: linear-gradient(to right, yellow, orange);
+  border-radius: 4px;
+}
+
+#user-icon, #play-button, #charge-button, #money, #draw-button, #user-name {
+  cursor: pointer;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(image/modal.png);
+  background-size: cover;
+  display: none;
+  padding-top: 12%;
+}
+
+#modal header {
+  background-color: orange;
+  position: absolute;
+  width: 30%;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 10px;
+  padding: 7px 12px;
+  left: 50%;
+  top: calc(17%);
+  transform: translateX(-50%);
+  border: 1px solid #f1f1f1;
+}
+
+#close {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  font-size: 3em;
+  font-weight: bold;
+  transition: transform .7s, color .7s;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+#close:hover {
+  color: rgb(75, 73, 73);
+  transform: scale(0.96);
+  background-color: #f1f1f1;
+}
+
+#background-play {
+  width: 80%;
+  height: 83%;
+  margin: 0 auto;
+  color: white;
+  background-image: linear-gradient(135deg, rgb(204, 59, 189), orange);
+  border-top-left-radius: 4% 20%;
+  border-top-right-radius: 4% 20%;
+  border-bottom-left-radius: 40% 20%;
+  border-bottom-right-radius: 40% 20%;
+  outline: 5px solid rgb(191, 173, 173);
+  outline-offset: -27px;
+  box-shadow: 3px 4px 20px rgb(0, 0, 0, 0.5);
+}
+
+#background-play::after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
+.col-30 > h1 {
+  font-size: 5.5em;
+  text-align: center;
+  font-weight: bold;
+  color: yellow;
+  text-shadow: 5px 7px 20px black, 0 5px 10px black;
+  margin-top: 30%;
+}
+
+#modal .col-30 div {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bet {
+  border-radius: 10px;
+  padding: 12px;
+  width: 93%;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, rgb(176, 46, 216), orange);
+  box-shadow: 2px 5px 7px black;
+  transition: transform 0.3s;
+}
+
+.bet:hover {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+#modal #bowl {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  top: 25%;
+  transform: scale(1.4);
+  border-radius: 50%;
+  outline: 100px solid rgb(0, 0, 0, 0.1);
+  outline-offset: -150px;
+}
+
+.xuc-sac img {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px black;
+}
+
+.xuc-sac img:first-child {
+  top: 50%;
+  left: 27%;
+  transform: rotate(20deg);
+}
+
+.xuc-sac img:nth-child(2) {
+  top: 60%;
+  left: 50%;
+  transform: rotate(30deg);
+}
+
+.xuc-sac img:last-child {
+  top: 45%;
+  left: 50%;
+  transform: rotate(-10deg);
+}
